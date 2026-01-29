@@ -1,73 +1,54 @@
 # 🚀 Space Travel Weather Station
 
-Ever wanted to check the weather like you're commanding a spaceship? Welcome to your personal weather station with a cosmic twist!
+A small, space-themed weather app that shows current conditions for any city. Type a city name, press Search (or Enter), and the app fetches live weather data and displays it in a futuristic UI with a twinkling starfield.
 
-## What Does This Do?
+## What it does
+- Look up a city name (geocoding) and fetch current weather for its coordinates.
+- Shows: temperature, "feels like", humidity, wind speed, and a weather icon/description.
+- Uses a simple space-themed layout with animated stars.
 
-This is a simple, fun weather app that tells you what the weather is like anywhere in the world. Just type in a city name and boom—you get the temperature, how it actually feels, humidity, wind speed, and air pressure. All wrapped up in a cool space-themed design with twinkling stars and neon vibes.
+## APIs
+- Geocoding + forecast: Open‑Meteo (no API key required).
+  - Geocoding endpoint: geocoding-api.open-meteo.com
+  - Forecast endpoint: api.open-meteo.com
 
-## Features
+## How to run locally
+1. Clone or open this folder.
+2. Serve the files (recommended) or open index.html in a browser:
+   - Quick server (requires Python):  
+     - Windows PowerShell / Command Prompt: `python -m http.server 8000`
+     - Then open: `http://localhost:8000`
+   - Or use the VS Code Live Server extension.
+3. Type a city name in the search box and press Enter or click Search.
 
-✨ **Search Any City** - Type a city name and see its weather instantly  
-🌟 **Starfield Background** - Animated stars twinkling in the background  
-💫 **Glowing Design** - Futuristic neon cyan styling that looks awesome  
-📊 **Weather Details** - Temperature, feels-like temp, humidity, wind, and pressure  
-🎯 **Super Simple** - No complicated setup, just open and use  
+Note: Some browsers block fetch requests from file://; using a local server avoids CORS/network issues.
 
-## How to Use It
+## File overview
+- index.html — main page and UI
+- style.css — visual styling and animations
+- script.js — starfield, geocoding, weather fetch, and UI update logic
+- README.md — this file
 
-1. Download or clone this project
-2. Open `index.html` in your web browser
-3. Type a city name (like "New York", "Tokyo", "Paris")
-4. Click Search or press Enter
-5. Watch the weather data appear in your space command center!
+## Usage tips & troubleshooting
+- If you see "City not found", try a more specific name (e.g., "Paris, FR" or include country).
+- If nothing loads, open DevTools (F12) → Console / Network to view errors or failed requests.
+- If the UI shows stale results after multiple searches, reload the page.
 
-**Tip:** London's weather loads by default when you first open it.
+## Contributing / Git
+Make changes locally, then commit and push:
 
-## The Files
-
+```bash
+cd c:\Users\Diya\OneDrive\test
+git add .
+git commit -m "Update README and app improvements"
+git pull origin main   # pull remote changes first if required
+git push origin main
 ```
-index.html  → The main page (HTML structure)
-style.css   → All the cool space styling
-script.js   → The magic that makes it work
-README.md   → This file!
-```
 
-## How It Actually Works
+## Ideas for improvement
+- Add a 5-day forecast
+- Geolocation fallback to show local weather
+- Celsius/Fahrenheit toggle
+- Save favorite cities
 
-The app uses the **OpenWeatherMap API** (it's free!) to grab real weather data from the internet. When you search for a city:
-
-1. Your search gets sent to OpenWeatherMap
-2. They send back the actual weather data
-3. We display it in a fun space-themed layout
-4. You see the weather instantly!
-
-## What You Need
-
-- A web browser (Chrome, Firefox, Safari, Edge—any of them work)
-- An internet connection (to fetch real weather data)
-- That's it! No installation needed.
-
-## Want to Improve It?
-
-Here are some cool ideas you could add:
-
-- A 5-day weather forecast
-- Use your phone's location to show local weather
-- Toggle between Celsius and Fahrenheit
-- Save your favorite cities
-- Weather alerts when storms are coming
-
-## Troubleshooting
-
-**"Can't find the city"** → Make sure you spelled it right and try again  
-**"Nothing shows up"** → Check your internet connection  
-**"Looks broken"** → Try refreshing the page or clearing your browser cache  
-
-## Just For Fun
-
-Made with ❤️ and a love for space. No fancy frameworks, just plain HTML, CSS, and JavaScript doing their thing. Perfect for learning how web apps work!
-
----
-
-Have fun exploring the weather across the galaxy! 🌍🚀
+Made with plain HTML, CSS, and JavaScript — enjoy exploring the weather across the galaxy! 🌍🚀
