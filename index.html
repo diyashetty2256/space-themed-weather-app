@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel Weather Station</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Starfield Background -->
+    <div class="starfield" id="starfield"></div>
+
+    <!-- Main App -->
+    <div class="container">
+        <h1 class="title">🚀 SPACE WEATHER</h1>
+        <p class="subtitle">Atmospheric Analysis System v1.0</p>
+
+        <!-- Error Message -->
+        <div class="error" id="error"></div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+            <button onclick="searchWeather()">Search</button>
+        </div>
+
+        <!-- Weather Display -->
+        <div class="weather-display" id="weatherDisplay">
+            <div class="location" id="location"></div>
+            
+            <div class="temperature-display">
+                <div>
+                    <div class="temp-main" id="temperature"></div>
+                    <div class="weather-description" id="description"></div>
+                </div>
+                <div class="weather-icon" id="icon"></div>
+            </div>
+
+            <div class="mission-data">
+                <div class="data-box">
+                    <div class="data-label">Feels Like</div>
+                    <div class="data-value" id="feelsLike"></div>
+                </div>
+                <div class="data-box">
+                    <div class="data-label">Humidity</div>
+                    <div class="data-value" id="humidity"></div>
+                </div>
+                <div class="data-box">
+                    <div class="data-label">Wind Speed</div>
+                    <div class="data-value" id="windSpeed"></div>
+                </div>
+                <div class="data-box">
+                    <div class="data-label">Pressure</div>
+                    <div class="data-value" id="pressure"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
